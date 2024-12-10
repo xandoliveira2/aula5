@@ -1,3 +1,2 @@
 
 # Dependências para o projeto
-unittest
