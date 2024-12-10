@@ -44,20 +44,6 @@ python -m unittest test_calculadora.py
 
 ## Configurando CI/CD
 
-### Travis CI
-1. Acesse [Travis CI](https://travis-ci.com/) e conecte seu repositório.
-2. Crie o arquivo `.travis.yml` no repositório com o seguinte conteúdo:
-```yaml
-language: python
-python:
-  - "3.8"
-install:
-  - pip install -r requirements.txt
-script:
-  - python -m unittest test_calculadora.py
-```
-3. Faça um commit e um push para iniciar o build.
-
 ### GitHub Actions
 1. No GitHub, vá até a aba **Actions** do seu repositório.
 2. Crie um arquivo no caminho `.github/workflows/python-app.yml` com o seguinte conteúdo:
