@@ -1,7 +1,7 @@
 
 # Projeto de Exemplo: Calculadora em Python
 
-Este é um projeto simples de calculadora em Python usado para demonstrar como configurar CI/CD com Travis CI e GitHub Actions.
+Este é um projeto simples de calculadora em Python usado para demonstrar como configurar CI/CD com GitHub Actions.
 
 ## Funcionalidades
 - Soma
