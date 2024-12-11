@@ -293,4 +293,35 @@ Nesta etapa, vamos simular um processo de **Continuous Delivery (CD)** utilizand
    - Após a conclusão bem-sucedida do workflow, clique no job do workflow em **Actions**.
    - Na seção **Artifacts**, baixe o arquivo `calculadora-artifact`.
 
-Essa etapa demonstra como configurar um processo básico de **Continuous Delivery**, empacotando o projeto e disponibilizando-o como artefato. Você pode
+5. **Entendendo as novas etapas do workflow:**
+
+   - **Empacotamento do Projeto:**
+     - A etapa:
+       ```yaml
+       - name: Package project
+         run: zip -r calculadora.zip .
+       ```
+       Compacta todos os arquivos do repositório em um único arquivo ZIP chamado `calculadora.zip`. Isso é útil para organizar e distribuir os arquivos do projeto de maneira prática.
+
+   - **Upload do Artefato:**
+     - A etapa:
+       ```yaml
+       - name: Upload artifact
+         uses: actions/upload-artifact@v3
+         with:
+           name: calculadora-artifact
+           path: calculadora.zip
+       ```
+       Envia o arquivo `calculadora.zip` para o GitHub como um artefato associado à execução do workflow. Ele pode ser baixado manualmente na aba **Actions** do repositório.
+
+6. **Validação do Processo:**
+   - Certifique-se de que as etapas do workflow foram executadas sem erros.
+   - Confirme que o artefato gerado está acessível na aba **Actions** e que o arquivo compactado contém todos os arquivos esperados do projeto.
+
+---
+
+### **Atividade**
+- utilizando este projeto como base, crie um repositório no GitHub com um novo projeto (Sem ser a calculadora)
+- Em seguida crie um teste de validação (CI)
+- Gere artefatos (CD)
+- Entregue o link do GitHub criado via TEAMS contendo imagens demonstrando os Teste do Action em ação (CI) e print do repositório criado com os artefatos compactados (CD) como apresentado no projeto em aula.
