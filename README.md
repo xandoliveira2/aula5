@@ -325,6 +325,14 @@ Nesta etapa, vamos simular um processo de **Continuous Delivery (CD)** utilizand
  - Com isso poderá fazer do download da ultima versão do repositório atualizada.
 ---
 
+## Avaliação da Aula
+
+Por favor, ajude-nos a melhorar fornecendo seu feedback sobre a aula. Responda ao formulário de avaliação clicando no link abaixo:
+
+[Formulário de Avaliação - CI/CD com GitHub Actions](https://forms.gle/Kry7fqLkrriYxE3U7)
+
+
+---
 ### **Atividade**
 - utilizando este projeto como base, crie um repositório no GitHub com um novo projeto (Sem ser a calculadora)
 - Em seguida crie um teste de validação (CI)
