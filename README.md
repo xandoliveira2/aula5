@@ -320,7 +320,7 @@ Nesta etapa, vamos simular um processo de **Continuous Delivery (CD)** utilizand
 
 7. **Encontrando os Artefatos:**
  - Vá na Aba Action em seguida clique sobre o ultimo Action executado
- - Após isso, descça até o final da página e encontrará a seção Artifacts conforme imagem abaixo:
+ - Após isso, desça até o final da página e encontrará a seção Artifacts conforme imagem abaixo:
  - ![Artefato no Workflow](https://github.com/pedroAmalfi/FatecItapira/blob/main/assets/artefato.PNG?raw=true)
  - Com isso poderá fazer do download da ultima versão do repositório atualizada.
 ---
