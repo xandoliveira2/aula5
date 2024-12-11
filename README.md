@@ -190,3 +190,47 @@ jobs:
 #### **6. Resultado do Workflow:**
 - **Sucesso:** Todos os testes passam.
 - **Falha:** Algum teste retorna um erro ou exceção, interrompendo o workflow.
+
+---
+
+## Testando o CI com GitHub Actions
+
+Para testar se o CI do GitHub Actions está funcionando corretamente, siga os passos abaixo:
+
+1. **Introduza um erro proposital:**
+   - No arquivo `calculadora.py`, altere a função `soma` para realizar uma subtração:
+     ```python
+     def soma(a, b):
+         return a - b  # Erro proposital
+     ```
+   - Faça um commit e um push com a alteração:
+     ```bash
+     git add calculadora.py
+     git commit -m "Simulação de erro para testar CI"
+     git push
+     ```
+
+2. **Verifique o erro no GitHub Actions:**
+   - Você receberá um e-mail notificando que o workflow falhou.
+   - Vá até a aba **Actions** no GitHub e veja que o workflow está marcado em vermelho, indicando um erro. Consulte os logs para verificar a falha.
+   - [Anexar imagem aqui: Exemplo de erro no GitHub Actions.]
+
+3. **Corrija o erro:**
+   - Restaure a função `soma` para seu estado correto:
+     ```python
+     def soma(a, b):
+         return a + b  # Correção
+     ```
+   - Faça um novo commit e push:
+     ```bash
+     git add calculadora.py
+     git commit -m "Correção do erro proposital"
+     git push
+     ```
+
+4. **Verifique o sucesso no GitHub Actions:**
+   - Após corrigir o erro, o workflow será executado novamente.
+   - Agora, ele será marcado em verde, indicando que todos os testes foram aprovados.
+   - [Anexar imagem aqui: Exemplo de sucesso no GitHub Actions.]
+
+Esses passos demonstram como o GitHub Actions reage a erros e confirma quando os problemas são resolvidos, garantindo a confiabilidade do código no processo de integração contínua.
