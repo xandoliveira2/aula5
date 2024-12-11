@@ -1,6 +1,6 @@
-def soma(a, b):
-    return a - b  # Alteração proposital para causar erro
 
+def soma(a, b):
+    return a + b
 
 def subtrai(a, b):
     return a - b
