@@ -1,4 +1,4 @@
-name: Python application
+name: Python application with CD
 
 on:
   push:
@@ -22,3 +22,10 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest test_calculadora.py
+    - name: Package project
+      run: zip -r calculadora.zip .
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: calculadora-artifact
+        path: calculadora.zip
