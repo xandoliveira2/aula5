@@ -1,7 +1,7 @@
 # Projeto de Exemplo: Calculadora em Python
 
 Este é um projeto simples de calculadora em Python usado para demonstrar como configurar CI/CD com GitHub Actions.
-
+ 
 ---
 
 ## O que é o GitHub Actions?
