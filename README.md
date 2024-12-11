@@ -213,7 +213,7 @@ Para testar se o CI do GitHub Actions está funcionando corretamente, siga os pa
 2. **Verifique o erro no GitHub Actions:**
    - Você receberá um e-mail notificando que o workflow falhou.
    - Vá até a aba **Actions** no GitHub e veja que o workflow está marcado em vermelho, indicando um erro. Consulte os logs para verificar a falha.
-   - [Anexar imagem aqui: Exemplo de erro no GitHub Actions.]
+   - ![Erro no Workflow](https://github.com/pedroAmalfi/FatecItapira/blob/main/assets/erro.PNG?raw=true)
 
 3. **Corrija o erro:**
    - Restaure a função `soma` para seu estado correto:
@@ -231,6 +231,6 @@ Para testar se o CI do GitHub Actions está funcionando corretamente, siga os pa
 4. **Verifique o sucesso no GitHub Actions:**
    - Após corrigir o erro, o workflow será executado novamente.
    - Agora, ele será marcado em verde, indicando que todos os testes foram aprovados.
-   - [Anexar imagem aqui: Exemplo de sucesso no GitHub Actions.]
+   - ![Sucesso  no Workflow](https://github.com/pedroAmalfi/FatecItapira/blob/main/assets/sucesso.PNG)
 
 Esses passos demonstram como o GitHub Actions reage a erros e confirma quando os problemas são resolvidos, garantindo a confiabilidade do código no processo de integração contínua.
