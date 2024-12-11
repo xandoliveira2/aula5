@@ -234,3 +234,63 @@ Para testar se o CI do GitHub Actions está funcionando corretamente, siga os pa
    - ![Sucesso  no Workflow](https://github.com/pedroAmalfi/FatecItapira/blob/main/assets/sucesso.PNG)
 
 Esses passos demonstram como o GitHub Actions reage a erros e confirma quando os problemas são resolvidos, garantindo a confiabilidade do código no processo de integração contínua.
+
+---
+
+## Testando o Continuous Delivery com GitHub Actions
+
+Nesta etapa, vamos simular um processo de **Continuous Delivery (CD)** utilizando o GitHub Actions para empacotar o projeto da calculadora como um artefato.
+
+1. **Atualize o arquivo do workflow:**
+   - Adicione a etapa de empacotamento e upload de artefato ao arquivo `.github/workflows/python-app.yml`:
+     ```yaml
+     name: Python application with CD
+
+     on:
+       push:
+         branches:
+           - main
+
+     jobs:
+       build:
+         runs-on: ubuntu-latest
+
+         steps:
+         - uses: actions/checkout@v3
+         - name: Set up Python
+           uses: actions/setup-python@v4
+           with:
+             python-version: '3.8'
+         - name: Install dependencies
+           run: |
+             python -m pip install --upgrade pip
+             pip install -r requirements.txt
+         - name: Run tests
+           run: |
+             python -m unittest test_calculadora.py
+         - name: Package project
+           run: zip -r calculadora.zip .
+         - name: Upload artifact
+           uses: actions/upload-artifact@v3
+           with:
+             name: calculadora-artifact
+             path: calculadora.zip
+     ```
+
+2. **Faça um commit e push:**
+   - Após editar o workflow, salve o arquivo, faça o commit e o push:
+     ```bash
+     git add .github/workflows/python-app.yml
+     git commit -m "Adicionado suporte ao CD no workflow"
+     git push
+     ```
+
+3. **Verifique o workflow no GitHub Actions:**
+   - Vá para a aba **Actions** e observe o novo workflow.
+   - Certifique-se de que os testes são executados e o artefato é empacotado corretamente.
+
+4. **Baixe o artefato gerado:**
+   - Após a conclusão bem-sucedida do workflow, clique no job do workflow em **Actions**.
+   - Na seção **Artifacts**, baixe o arquivo `calculadora-artifact`.
+
+Essa etapa demonstra como configurar um processo básico de **Continuous Delivery**, empacotando o projeto e disponibilizando-o como artefato. Você pode
